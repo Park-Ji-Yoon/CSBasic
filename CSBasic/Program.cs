@@ -150,6 +150,15 @@ namespace CSBasic
             Console.WriteLine("int : " + sizeof(char));
 
             bool IsLive = true;
+
+            // 증감 연산자
+            // 전위, 후위에 따라서 출력값이 변할 수 있으니 주의
+            int num = 10;
+            Console.WriteLine(num++);
+            Console.WriteLine(++num);
+            Console.WriteLine(num--);
+            Console.WriteLine(--num);
+
         }
     }
 }
