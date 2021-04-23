@@ -17,7 +17,7 @@ namespace CSBasic
             // keyword
             // int as;
 
-            //context keyword
+            // context keyword
             var name = "박지윤";
             var var = "함기훈";
 
@@ -196,6 +196,21 @@ namespace CSBasic
             Console.WriteLine(someb.GetType());
             Console.WriteLine(somec.GetType());
 
+            // 입력 (콘솔 입력)
+            string input;
+            while (true)
+            {
+                Console.Write("입력 : ");
+                input = Console.ReadLine();
+                if (input.Equals("q"))
+                {
+                    break;
+                }
+                else
+                {
+                    Console.WriteLine(input);
+                }
+            }
         }
     }
 }
