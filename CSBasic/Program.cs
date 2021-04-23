@@ -130,7 +130,7 @@ namespace CSBasic
             Console.WriteLine(int.MaxValue);
             Console.WriteLine(double.MaxValue);
 
-            Console.WriteLine(-int.MinValue);
+            // Console.WriteLine(-int.MinValue);
             Console.WriteLine(-int.MaxValue);
 
             Console.WriteLine(3L);
@@ -172,6 +172,20 @@ namespace CSBasic
             output3 += " World";
             output3 = output3 + "?!";
             Console.WriteLine(output3);
+
+            // 자료형 검사
+            int _int = 273;
+            long _long = 522454654656546;
+            float _float = 52.273F;
+            double _double = 52.273;
+            char _char = '귤';
+            string _string = "문자열";
+            Console.WriteLine(_int.GetType());
+            Console.WriteLine(_long.GetType());
+            Console.WriteLine(_float.GetType());
+            Console.WriteLine(_double.GetType());
+            Console.WriteLine(_char.GetType()); 
+            Console.WriteLine(_string.GetType());
         }
     }
 }
