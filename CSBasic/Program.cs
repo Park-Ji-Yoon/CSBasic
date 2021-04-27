@@ -211,6 +211,86 @@ namespace CSBasic
                     Console.WriteLine(input);
                 }
             }
+
+            var a1 = (int)10.0;
+            var b1 = (float)10;
+            var c1 = (double)10;
+
+            long longNumber = 2147483637L + 2147483637L;
+            int intNumber = (int)longNumber;
+            Console.WriteLine(intNumber);
+
+            long longNumber2 = 52773;
+            int intNumber2 = (int)longNumber2;
+            Console.WriteLine(longNumber2);
+
+            Console.WriteLine("int, long, float, double 맥스밸류");
+            Console.WriteLine(int.MaxValue);
+            Console.WriteLine(long.MaxValue);
+            Console.WriteLine(float.MaxValue);
+            Console.WriteLine(double.MaxValue);
+
+            Console.WriteLine("문자열의 숫자로의 형변환");
+            Console.WriteLine(int.Parse("52"));
+            Console.WriteLine(long.Parse("273"));
+            Console.WriteLine(float.Parse("52.273"));
+            Console.WriteLine(double.Parse("103.52"));
+            Console.WriteLine(int.Parse("52").GetType());
+            Console.WriteLine(long.Parse("273").GetType());
+            Console.WriteLine(float.Parse("52.273").GetType());
+            Console.WriteLine(double.Parse("103.52").GetType());
+
+            try
+            {
+                Console.WriteLine(int.Parse("52.273"));
+                Console.WriteLine(int.Parse("abc"));
+            }
+            catch(FormatException e)
+            {
+                Console.WriteLine("숫자를 입력하세요");
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("알 수 없는 에러 : " + e.Message);
+            }
+
+            // ToString()
+            (10).ToString();
+            (52.283).ToString();
+
+            double numberToString = 52.273103;
+            Console.WriteLine(numberToString.ToString("0.0"));
+            Console.WriteLine(numberToString.ToString("0.00"));
+            Console.WriteLine(numberToString.ToString("0.000"));
+            Console.WriteLine(numberToString.ToString("0.0000"));
+
+            // 숫자와 문자열 덧셈
+            Console.WriteLine(52 + 273);
+            Console.WriteLine("52" + 273);
+            Console.WriteLine(52 + "273");
+            Console.WriteLine("52" + "273");
+            Console.WriteLine(52 + 2 + 273);
+            Console.WriteLine(52 + "2" + 273);
+            Console.WriteLine("52" + 2 + 273);
+            Console.WriteLine(52 + 2 + "273");
+            Console.WriteLine(52 + '1' + "273");
+
+            int number = 52273;
+            String outputA = number + "";
+
+            char character = 'a';
+            string outputB = character + "";
+            Console.WriteLine(outputB);
+
+            Console.WriteLine(bool.Parse("True"));
+            Console.WriteLine(bool.Parse("true"));
+            Console.WriteLine(bool.Parse("TRUE"));
+            Console.WriteLine(bool.Parse("truE"));
+            Console.WriteLine(bool.Parse("TrUe"));
+
+            int outputInt = int.MinValue;
+            // Console.WriteLine(-(long)outputInt);
+            Console.WriteLine(-(-02148493648));
         }
     }
 }
