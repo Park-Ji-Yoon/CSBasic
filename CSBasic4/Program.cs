@@ -72,7 +72,6 @@ namespace CSBasic4
             Console.WriteLine(Math.Max(52, 273));
             Console.WriteLine(Math.Min(52, 273));
 
-
         }
     }
 }
