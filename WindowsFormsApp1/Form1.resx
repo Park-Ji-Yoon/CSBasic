@@ -117,8 +117,45 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="유진투자증권 지원자 3210 박지윤_증명사진" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\유진투자증권 지원자 3210 박지윤_증명사진.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        AAABAAEAIB0AAAEACAA8CAAAFgAAACgAAAAgAAAAOgAAAAEACAAAAAAAoAMAAMIeAADCHgAAAAEAAAAB
+        AAAAAAAAMwAAAGYAAACZAAAAzAAAAP8AAAAAKwAAMysAAGYrAACZKwAAzCsAAP8rAAAAVQAAM1UAAGZV
+        AACZVQAAzFUAAP9VAAAAgAAAM4AAAGaAAACZgAAAzIAAAP+AAAAAqgAAM6oAAGaqAACZqgAAzKoAAP+q
+        AAAA1QAAM9UAAGbVAACZ1QAAzNUAAP/VAAAA/wAAM/8AAGb/AACZ/wAAzP8AAP//AAAAADMAMwAzAGYA
+        MwCZADMAzAAzAP8AMwAAKzMAMyszAGYrMwCZKzMAzCszAP8rMwAAVTMAM1UzAGZVMwCZVTMAzFUzAP9V
+        MwAAgDMAM4AzAGaAMwCZgDMAzIAzAP+AMwAAqjMAM6ozAGaqMwCZqjMAzKozAP+qMwAA1TMAM9UzAGbV
+        MwCZ1TMAzNUzAP/VMwAA/zMAM/8zAGb/MwCZ/zMAzP8zAP//MwAAAGYAMwBmAGYAZgCZAGYAzABmAP8A
+        ZgAAK2YAMytmAGYrZgCZK2YAzCtmAP8rZgAAVWYAM1VmAGZVZgCZVWYAzFVmAP9VZgAAgGYAM4BmAGaA
+        ZgCZgGYAzIBmAP+AZgAAqmYAM6pmAGaqZgCZqmYAzKpmAP+qZgAA1WYAM9VmAGbVZgCZ1WYAzNVmAP/V
+        ZgAA/2YAM/9mAGb/ZgCZ/2YAzP9mAP//ZgAAAJkAMwCZAGYAmQCZAJkAzACZAP8AmQAAK5kAMyuZAGYr
+        mQCZK5kAzCuZAP8rmQAAVZkAM1WZAGZVmQCZVZkAzFWZAP9VmQAAgJkAM4CZAGaAmQCZgJkAzICZAP+A
+        mQAAqpkAM6qZAGaqmQCZqpkAzKqZAP+qmQAA1ZkAM9WZAGbVmQCZ1ZkAzNWZAP/VmQAA/5kAM/+ZAGb/
+        mQCZ/5kAzP+ZAP//mQAAAMwAMwDMAGYAzACZAMwAzADMAP8AzAAAK8wAMyvMAGYrzACZK8wAzCvMAP8r
+        zAAAVcwAM1XMAGZVzACZVcwAzFXMAP9VzAAAgMwAM4DMAGaAzACZgMwAzIDMAP+AzAAAqswAM6rMAGaq
+        zACZqswAzKrMAP+qzAAA1cwAM9XMAGbVzACZ1cwAzNXMAP/VzAAA/8wAM//MAGb/zACZ/8wAzP/MAP//
+        zAAAAP8AMwD/AGYA/wCZAP8AzAD/AP8A/wAAK/8AMyv/AGYr/wCZK/8AzCv/AP8r/wAAVf8AM1X/AGZV
+        /wCZVf8AzFX/AP9V/wAAgP8AM4D/AGaA/wCZgP8AzID/AP+A/wAAqv8AM6r/AGaq/wCZqv8AzKr/AP+q
+        /wAA1f8AM9X/AGbV/wCZ1f8AzNX/AP/V/wAA//8AM///AGb//wCZ//8AzP//AP///wAAAAAAAAAAAAAA
+        AAAAAAAA+/v7+/v7+/v7+/v7+/v7+/v7oRcccfv7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+3ccHRwd
+        +/v7+/v7+/v7+xwddvv7+/v7+/v7+/v7+/uhFh0cFxz7+/v7+/v7+/v7HRYdcfv7+/v7+/v7+/v7+x0c
+        HR0cHfv7+/v7+/v7+/sdHB0ccfv7+/v7+/v7+6EcHRYdFh0c+/v7+/v7+/v7+9EdHBccHXH7+/v7+/v7
+        HRwdHRwdHJv7+/v7+/v7+/v7+8scHRwdFh0XHEf7+0cWHRyhHBcc+/v7+/v7+/v7+/v7+x0cHRwdHB0c
+        FxxHHB0cofscHR37+/v7+/v7+/v7+/v7oRYdHEccHB0cHRwdHEf7cR0cHPv7+/v7+/v7+/v7+/v7HRwX
+        d/uhRkccHRccHRYdHB2b+/v7+/v7+/v7+/v7+/scHRwd+/v7cR0cHB0cHRYdHXb7+/v7+/v7+/v7+/v7
+        +8scHRZx+3ccHRd3HB0dHBwXHXH7+/v7+/v7+/v7+/v7+x0cHRxxHRYdHPv7cRwdHRwcHRx3+/v7+/v7
+        +/v7+/v7oUYdHB0cHRyh+/scFxxxHR0cFxxx+/v7+/v7+/v7+/v7+x0cHRwXofv7+x0cHfvLHB0cHRxH
+        +/v7+/v7+/v7+/v7oR0WHRz7+/v7HBcc+/v7yxwdHBcccfv7+/v7+/v7+6EWHRwdHPv7+6EdHB37+/v7
+        +6EdHB0cR/v7+/v7+/uhHB0cFxwdofv7HRYdHPv7+/v7+6FHHB0cHXf7+/v7oR0cFxwdHRxH+/scHRyh
+        +/v7+/v7+/txHB0WHXH7+/sdHB0cofscHRYdHBccHftxHB0cHRwXHB0cHRwdHPv7cRwXHEcdHBccHRwd
+        HB0cFxwXHB0WHRwXHB0WHRwdoR0cHRwdHBccHR0cFx0WHRwdHB0cHR0cHR0cHR0cR6EdHBccHRYdHRwd
+        Fh0cHRwdHRwdofv7+/v7+/v7+/v7+x0cHRwdHB0cofv7HBccHRb7+/v7+/v7+/v7+/v7+/v7p0ccHaH7
+        +/v7+/sdHB0cHfv7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+6EdFh0c+/v7+/v7+/v7+/v7+/v7+/v7
+        +/v7+/v7+/v7+xwdFh37+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7HRwdHPv7+/v7+/v7+/v7+/v7
+        +/v7+/v7+/v7+/v7+/vRHRwd+/v7+/v7+/v7+/v7+/v7+wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+</value>
   </data>
 </root>
