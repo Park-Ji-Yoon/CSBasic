@@ -81,6 +81,35 @@ namespace CSBasic4
             Product productC = new Product() { name = "탕수육" };
             Product productD = new Product() { price = 9999999 };
             Product productE = new Product() { price = 30000, name = "양장피" };
+
+            List<Student> students = new List<Student>() {
+                new Student() { name = "윤인성", grade = 1 },
+                new Student() { name = "윤이성", grade = 2 },
+                new Student() { name = "윤삼성", grade = 3 },
+                new Student() { name = "윤사성", grade = 4 },
+                new Student() { name = "윤오성", grade = 5 },
+                new Student() { name = "윤육성", grade = 6 },
+            };
+
+            for (int q = 0; q < students.Count; q++)
+            {
+                if (students[q].grade > 1)
+                {
+                    students.RemoveAt(q);
+                    // students.Remove(student[i]);
+                }
+            }
+
+            for (int i = students.Count - 1; i >= 0; i--) {
+                if (students[i].grade > 1){
+                    students.RemoveAt(i);
+                }
+            }
+
+            foreach (var item in students)
+            {
+                Console.WriteLine(item.name + " : " + item.grade);
+            }
         }
     }
 }
