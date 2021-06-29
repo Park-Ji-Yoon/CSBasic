@@ -91,9 +91,33 @@ namespace CSBasic4
 
             Product productA = new Product() { name = "짜장면", price = 5500 };
             Product productB = new Product() { name = "짬봉", price = 8000 };
+            Product productBB = new Product() { name = "볶음밥", price = 6000 };
             Product productC = new Product() { name = "탕수육" };
             Product productD = new Product() { price = 9999999 };
             Product productE = new Product() { price = 30000, name = "양장피" };
+
+            List<Student> students = new List<Student>()
+            {
+                new Student() { name = "일지윤", grade = 1 },
+                new Student() { name = "이지윤", grade = 1 },
+                new Student() { name = "삼지윤", grade = 1 },
+                new Student() { name = "사지윤", grade = 3 },
+                new Student() { name = "오지윤", grade = 3 },
+                new Student() { name = "육지윤", grade = 2 },
+                new Student() { name = "칠지윤", grade = 2 }
+            };
+
+            //foreach(var item in students)
+            for (int i = 0; i < students.Count; i++)
+                if (students[i].grade > 1)
+                    students.RemoveAt(i);
+
+            //students.Remove(students[i]);
+
+            foreach (var item in students)
+            {
+                Console.WriteLine(item.name + " : " + item.grade);
+            }
         }
     }
 } 
