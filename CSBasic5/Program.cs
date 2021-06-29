@@ -6,8 +6,15 @@ using System.Threading.Tasks;
 
 namespace CSBasic4
 {
-    //class Math { 
-    //}
+    class MyMath
+    {
+        public static double PI = 3.141592;
+        public static void Greeting()
+        {
+            // Console.WriteLine(somenumber);
+            Console.WriteLine("Greeting!!!");
+        }
+    }
 
     class Car
     {
@@ -40,6 +47,7 @@ namespace CSBasic4
         static void Main(string[] args)
         {
             Car[] cars = new Car[10];
+            Car[] cara = new Car[10];
 
             Random random = new Random();
             Console.WriteLine(random.Next());
@@ -62,6 +70,9 @@ namespace CSBasic4
             {
                 Console.WriteLine("Count: " + list.Count + "\titem: " + item);
                 list.Remove(item);
+
+                Console.WriteLine("Count: " + list.Count + "\titem:" + item);
+                //list.Remove(item);
             }
 
             Console.WriteLine(Math.Abs(-52273));
@@ -72,7 +83,17 @@ namespace CSBasic4
             Console.WriteLine(Math.Max(52, 273));
             Console.WriteLine(Math.Min(52, 273));
 
+            Product product = new Product();
+            product.name = "감자";
+            product.price = 2000;
 
+            Console.WriteLine(product.name + ": " + product.price + "원");
+
+            Product productA = new Product() { name = "짜장면", price = 5500 };
+            Product productB = new Product() { name = "짬봉", price = 8000 };
+            Product productC = new Product() { name = "탕수육" };
+            Product productD = new Product() { price = 9999999 };
+            Product productE = new Product() { price = 30000, name = "양장피" };
         }
     }
 } 
