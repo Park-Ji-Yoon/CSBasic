@@ -4,38 +4,75 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CSBasic5
+namespace CSBasic4
 {
+    //class Math { 
+    //}
+
+    class Car
+    {
+        int carNumber;
+        DateTime inTime;
+        DateTime outTime;
+
+        public void SetInTime()
+        {
+            this.inTime = DateTime.Now;
+        }
+        public void SetOutTime()
+        {
+            this.outTime = DateTime.Now;
+        }
+    }
     class Program
     {
-        class MethodExample
+
+        class FirstClass
         {
-            public int Power(int x)
-            {
-                return x * x;
-            }
 
-            public int Multi(int x, int y)
-            {
-                return x * y;
-            }
-
-            public void Print()
-            {
-                Console.WriteLine("Print() 메서드 호출됨");
-            }
         }
 
-        
+        class SecondClass
+        {
+
+        }
 
         static void Main(string[] args)
         {
-            MethodExample me = new MethodExample();
-            Console.WriteLine(me.Power(10));
-            Console.WriteLine(me.Power(20));
-            Console.WriteLine(me.Multi(2123, 275));
-            Console.WriteLine(me.Multi(100, 3210));
-            me.Print();
+            Car[] cars = new Car[10];
+
+            Random random = new Random();
+            Console.WriteLine(random.Next());
+            Console.WriteLine(random.Next(100));
+            Console.WriteLine(random.Next(1, 19));
+            Console.WriteLine(random.NextDouble());
+            Console.WriteLine(random.NextDouble());
+            Console.WriteLine(random.NextDouble());
+            Console.WriteLine(random.NextDouble());
+            Console.WriteLine(random.NextDouble());
+
+            //List<int> list = new List<int>();
+            //list.Add(52);
+            //list.Add(273);
+            //list.Add(32);
+            //list.Add(64);
+            List<int> list = new List<int>() { 52, 273, 32, 64 };
+
+            foreach (var item in list)
+            {
+                Console.WriteLine("Count: " + list.Count + "\titem: " + item);
+                list.Remove(item);
+            }
+
+            Console.WriteLine(Math.Abs(-52273));
+            Console.WriteLine(Math.Ceiling(52.273));
+            Console.WriteLine(Math.Floor(52.273));
+            Console.WriteLine(Math.Round(52.263));
+            Console.WriteLine(Math.Round(52.563));
+            Console.WriteLine(Math.Max(52, 273));
+            Console.WriteLine(Math.Min(52, 273));
+
+
         }
     }
-}
+} 
