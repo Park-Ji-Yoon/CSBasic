@@ -8,6 +8,7 @@ namespace CSBasic5
 {
     class Program
     {
+        int someModifier = 0;
         public int instanceVariable = 10;
         public int instanceMethod()
         {
@@ -50,6 +51,11 @@ namespace CSBasic5
 
         class Test
         {
+            public void TestMethod()
+            {
+                Program.Main(new string[] { "" });
+            }
+
             // Method Signature
             public int Sum(int min, int max)
             {
