@@ -9,7 +9,7 @@ namespace CSBasic5
     class Product
     {
         public static int counter = 0;
-        public int id;
+        public readonly int id;
         public string name;
         public int price;
 
@@ -20,6 +20,12 @@ namespace CSBasic5
             this.id = counter;
             this.name = name;
             this.price = price;
+        }
+
+        ~Product()
+        {
+            // Console.WriteLine(this.name + "의 소멸자 호출");
+            Console.WriteLine(this.name + "曰 나 죽네");
         }
 
         public override string ToString()
