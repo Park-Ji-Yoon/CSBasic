@@ -6,6 +6,40 @@ using System.Threading.Tasks;
 
 namespace CSBasic5
 {
+    class Product
+    {
+        public static int counter = 0;
+        public int id;
+        public string name;
+        public int price;
+
+        public Product(string name, int price)
+        {
+            /*Product.counter = counter + 1;*/
+            counter++;
+            this.id = counter;
+            this.name = name;
+            this.price = price;
+        }
+
+        public override string ToString()
+        {
+            // this 안 해도 되긴 함
+            return this.id + " : " + this.name + "(" + this.price + "원)";
+        }
+    }
+
+    class Sample
+    {
+        public static int value;
+
+        static Sample()
+        {
+            value = 10;
+            Console.WriteLine("정적 생성자 호출");
+        }
+    }
+
     class Program
     {
         int someModifier = 0;
@@ -115,6 +149,23 @@ namespace CSBasic5
             Console.WriteLine(MyMath.Abs(-273));
             Console.WriteLine(MyMath.Abs(52.273));
             Console.WriteLine(MyMath.Abs(999999999999999));
+
+            Product productA = new Product("감자", 2300);
+            Product productB = new Product("옥수수", 4500);
+            Product productC = new Product("고구마", 1200);
+
+            // Console.WriteLine(productA.id + " : " + productA.name);
+            Console.WriteLine(productA.ToString());
+            Console.WriteLine(productB.ToString());
+            Console.WriteLine(productC.ToString());
+            Console.WriteLine("작물이 " + Product.counter + "개 생성되었습니다.");
+
+            // 정적 생성자는 클래스가 처음 로딩될 때 한 번만 호출됨
+            Console.WriteLine("첫 번째 위치");
+            Sample sample = new Sample();
+            Console.WriteLine("두 번째 위치");
+            Console.WriteLine(Sample.value);
+            Console.WriteLine("세 번째 위치");
         }
     }
 }
