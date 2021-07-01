@@ -8,6 +8,28 @@ namespace CSBasic5
 {
     class Program
     {
+        public int instanceVariable = 10;
+        public int instanceMethod()
+        {
+            return 0;
+        }
+
+        class MyMath
+        {
+            public static int Abs(int input)
+            {
+                /*if(input < 0)
+                {
+                    return -input;
+                }
+                else
+                {
+                    return input;
+                }*/
+                return (input < 0) ? -input : input;
+            }
+        }
+
         class Test
         {
             // Method Signature
@@ -48,8 +70,22 @@ namespace CSBasic5
             Console.WriteLine(me.Multi(27, 300));
             me.print();
 
+            // min부터 max까지의 합 구하기
             Test test = new Test();
             Console.WriteLine(test.Sum(1, 100));
+
+            // 클래스 메서드 사용 - 절댓값 구하기
+            Console.WriteLine(MyMath.Abs(52));
+            Console.WriteLine(MyMath.Abs(-273));
+
+            // 클래스 메서드에서는 인스턴수 변수나 메서드에 접근 불가
+            // 객체를 만들어서 접근해야 한다.
+            /*Console.WriteLine(instanceVariable);
+            instanceMethod();*/
+
+            Program p = new Program();
+            Console.WriteLine(p.instanceVariable);
+            p.instanceMethod();
         }
     }
 }
