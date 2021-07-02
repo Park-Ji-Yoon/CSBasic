@@ -6,60 +6,94 @@ using System.Threading.Tasks;
 
 namespace CSBasic5
 {
+    class Box
+    {
+        private int width;
+        public int Width
+        {
+            get { return width; }
+            set
+            {
+                if (value > 0)
+                {
+                    width = value;
+                }
+                else
+                {
+                    Console.WriteLine("양수를 입력해주세요");
+                }
+            }
+        }
+        private int height;
+        public int Height
+        {
+            get { return height; }
+            set
+            {
+                if (value > 0)
+                {
+                    height = value;
+                }
+                else
+                {
+                    Console.WriteLine("양수를 입력해주세요");
+                }
+            }
+        }
+        public int Area
+        {
+            get { return this.Width * this.Height; }
+        }
+        public Box(int width, int height)
+        {
+            this.Width = width;
+            this.Height = height;
+        }
+    }
     class Product
     {
         public static int counter = 0;
         public readonly int id;
         public string name;
         public int price;
-
         public Product(string name, int price)
         {
-            /*Product.counter = counter + 1;*/
+            // Product.counter = counter + 1;
             counter++;
             this.id = counter;
             this.name = name;
             this.price = price;
         }
-
+        public override string ToString()
+        {
+            return this.id + " : " + this.name + " (" + this.price + "won)";
+        }
         ~Product()
         {
             // Console.WriteLine(this.name + "의 소멸자 호출");
-            Console.WriteLine(this.name + "曰 나 죽네");
-        }
-
-        public override string ToString()
-        {
-            // this 안 해도 되긴 함
-            return this.id + " : " + this.name + "(" + this.price + "원)";
+            Console.WriteLine(this.name + "曰 나 주거");
         }
     }
-
     class Sample
     {
         public static int value;
-
         static Sample()
         {
             value = 10;
             Console.WriteLine("정적 생성자 호출");
         }
     }
-
     class Program
     {
         int someModifier = 0;
         public int instanceVariable = 10;
-        public int instanceMethod()
-        {
-            return 0;
-        }
-
+        public int instanceMethod() { return 0; }
         class MyMath
         {
             public static int Abs(int input)
             {
-                /*if(input < 0)
+                return (input < 0) ? -input : input;
+                /*if(input<0)
                 {
                     return -input;
                 }
@@ -67,50 +101,42 @@ namespace CSBasic5
                 {
                     return input;
                 }*/
-                return (input < 0) ? -input : input;
             }
-
             public static double Abs(double input)
             {
-                return (input < 0) ? -input : input;
+                return input < 0 ? -input : input;
             }
-
             // Abs(long)
             public static long Abs(long input)
             {
-                return (input < 0) ? -input : input;
+                return input < 0 ? -input : input;
             }
-
-            // Abs(long)
-            // Method Signature가 같은 경우 오버로딩 불가
-            /*public static int Abs(long input)
+            /*// Abs(long)
+             * Method signature가 같은 경우 오버로딩 불가!
+            public static int Abs(long a2)
             {
                 return 0;
             }*/
         }
-
         class Test
         {
             public void TestMethod()
             {
                 Program.Main(new string[] { "" });
             }
-
             // Method Signature
             public int Sum(int min, int max)
             {
                 int output = 0;
-                for(int i = min; i <= max; i++)
+                for (int i = min; i <= max; i++)
                 {
                     output += i;
                 }
                 return output;
             }
         }
-
         class MethodExample
         {
-
             public int Power(int x)
             {
                 return x * x;
@@ -121,10 +147,9 @@ namespace CSBasic5
             }
             public void print()
             {
-                Console.WriteLine("Print() 메서드 호출");
+                Console.WriteLine("Print() 메서드 호출됨");
             }
         }
-
         static void Main(string[] args)
         {
             MethodExample me = new MethodExample();
@@ -172,6 +197,11 @@ namespace CSBasic5
             Console.WriteLine("두 번째 위치");
             Console.WriteLine(Sample.value);
             Console.WriteLine("세 번째 위치");
+
+            Box box = new Box(10, 200);
+            Console.WriteLine(box.Area);
+            Box wrongBox = new Box(-10, -5);
+            Console.WriteLine(wrongBox.Area);
         }
     }
 }
