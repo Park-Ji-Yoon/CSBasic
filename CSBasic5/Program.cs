@@ -71,7 +71,7 @@ namespace CSBasic5
         ~Product()
         {
             // Console.WriteLine(this.name + "의 소멸자 호출");
-            Console.WriteLine(this.name + "曰 나 주거");
+            Console.WriteLine(this.name + "曰 나 죽어");
         }
     }
     class Sample
@@ -202,6 +202,29 @@ namespace CSBasic5
             Console.WriteLine(box.Area);
             Box wrongBox = new Box(-10, -5);
             Console.WriteLine(wrongBox.Area);
+
+            int a = 10;
+            Change(a);
+            Console.WriteLine(a);
+
+            TestSome t = new TestSome();
+            t.value = 30;
+            TestSome.Change(t);
+            Console.WriteLine(t.value);
+        }
+
+        static void Change(int input)
+        {
+            input = 20;
+        }
+    }
+
+    class TestSome
+    {
+        public int value = 10;
+        public static void Change(TestSome input)
+        {
+            input.value = 20;
         }
     }
 }
