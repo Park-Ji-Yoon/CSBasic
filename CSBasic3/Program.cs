@@ -74,7 +74,7 @@ namespace CSBasic3
             Console.WriteLine(input3.ToUpper());
             Console.WriteLine(input3.ToLower());
             input3.ToLower(); // 헛고생
-            Console.WriteLine(input); // 기존 그대로 출력됨
+            Console.WriteLine(input3); // 기존 그대로 출력됨
 
             string foods = "감자 고구마 토마토";
             string[] foodsArray = foods.Split(new char[] { ' ' });
@@ -120,22 +120,25 @@ namespace CSBasic3
             Thread.Sleep(1000);
 
             int x = 1;
-            while(x < 50)
+            while (x < 50)
             {
                 Console.Clear();
                 Console.SetCursorPosition(x, 5);
 
-                if(x % 3 == 0)
+                if (x % 3 == 0)
                 {
                     Console.WriteLine("__@");
-                }else if(x % 3 == 1)
+                }
+                else if (x % 3 == 1)
                 {
                     Console.WriteLine("_^@");
                 }
-                else if(x % 3 == 2)
+                else if (x % 3 == 2)
                 {
                     Console.WriteLine("^_@");
                 }
+                x++;
+                Thread.Sleep(1000);
             }
         }
     }
