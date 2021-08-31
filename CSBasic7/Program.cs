@@ -6,6 +6,22 @@ using System.Threading.Tasks;
 
 namespace CSBasic7
 {
+    class Products
+    {
+        private List<string> list = new List<string>();
+        public Products()
+        {
+            list.Add("곱창");
+            list.Add("김치볶음밥");
+            list.Add("육회");
+            list.Add("마카롱");
+            list.Add("샐러드");
+        }
+        public string this[int i]{
+            get { return list[i]; }
+            set { Console.WriteLine(i + "번째 상품 설정"); }
+        }
+    }
     class Program
     {
         class Wanted<T>
@@ -26,6 +42,11 @@ namespace CSBasic7
         }
         static void Main(string[] args)
         {
+            Products ps = new Products();
+            Random rs = new Random();
+            int i = rs.Next(0, 5);
+            Console.WriteLine(ps[i]);
+
             Wanted<string> ws = new Wanted<string>("String");
             Wanted<int> wi = new Wanted<int>(100);
             Wanted<Student> wstu = new Wanted<Student>(new Student());
