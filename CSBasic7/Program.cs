@@ -24,6 +24,11 @@ namespace CSBasic7
     }
     class Program
     {
+        static void NextPosition(int x, int y, int vx, int vy, out int rx, out int ry)
+        {
+            rx = x + vx;
+            ry = y + vy;
+        }
         class Wanted<T>
         // where T : Student
         {
@@ -42,6 +47,27 @@ namespace CSBasic7
         }
         static void Main(string[] args)
         {
+            int x = 0;
+            int y = 0;
+            int vx = 1;
+            int vy = 1;
+            Console.WriteLine("현재 좌표 : " + x + ", " + y);
+            NextPosition(x, y, vx, vy, out x, out y); // 갱신됨
+            Console.WriteLine("다음 좌표 : " + x + ", " + y);
+
+            Console.Write("숫자 입력 : ");
+            int output;
+            bool result = int.TryParse(Console.ReadLine(), out output);
+            if (result)
+            {
+                Console.WriteLine("변환성공 : " + output);
+            }
+            else
+            {
+                // 실패하면 0이 들어감
+                Console.WriteLine("변환실패 : " + output);
+            }
+
             Products ps = new Products();
             Random rs = new Random();
             int i = rs.Next(0, 5);
