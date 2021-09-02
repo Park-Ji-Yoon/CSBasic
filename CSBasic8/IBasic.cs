@@ -9,6 +9,6 @@ namespace CSBasic8
     interface IBasic
     {
         int TestInstanceMethod();
-        int TestProperty { get; set; };
+        int TestProperty { get; set; }
     }
 }
