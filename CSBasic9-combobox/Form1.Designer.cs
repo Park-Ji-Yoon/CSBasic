@@ -29,35 +29,52 @@ namespace CSBasic9_combobox
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.foodBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.foodBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.listBox1 = new System.Windows.Forms.ListBox();
+            this.foodBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.foodBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.foodBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.foodBindingSource2)).BeginInit();
             this.SuspendLayout();
             // 
             // comboBox1
             // 
+            this.comboBox1.DataSource = this.foodBindingSource;
+            this.comboBox1.DisplayMember = "Name";
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "짜장면",
-            "짬뽕",
-            "탕수육",
-            "라조기",
-            "볶음밥",
-            "김치볶음밥",
-            "양꼬치",
-            "크림스파게티"});
             this.comboBox1.Location = new System.Drawing.Point(33, 30);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(121, 23);
             this.comboBox1.TabIndex = 0;
+            this.comboBox1.ValueMember = "Price";
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            // 
+            // foodBindingSource
+            // 
+            this.foodBindingSource.DataSource = typeof(CSBasic9_combobox.Food);
+            // 
+            // foodBindingSource1
+            // 
+            this.foodBindingSource1.DataSource = typeof(CSBasic9_combobox.Food);
             // 
             // listBox1
             // 
+            this.listBox1.DataSource = this.foodBindingSource2;
+            this.listBox1.DisplayMember = "Name";
             this.listBox1.FormattingEnabled = true;
             this.listBox1.ItemHeight = 15;
-            this.listBox1.Location = new System.Drawing.Point(33, 74);
+            this.listBox1.Location = new System.Drawing.Point(33, 79);
             this.listBox1.Name = "listBox1";
             this.listBox1.Size = new System.Drawing.Size(121, 349);
             this.listBox1.TabIndex = 1;
+            this.listBox1.ValueMember = "Price";
+            // 
+            // foodBindingSource2
+            // 
+            this.foodBindingSource2.DataSource = typeof(CSBasic9_combobox.Food);
             // 
             // Form1
             // 
@@ -68,6 +85,9 @@ namespace CSBasic9_combobox
             this.Controls.Add(this.comboBox1);
             this.Name = "Form1";
             this.Text = "Form1";
+            ((System.ComponentModel.ISupportInitialize)(this.foodBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.foodBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.foodBindingSource2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -76,6 +96,9 @@ namespace CSBasic9_combobox
 
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.BindingSource foodBindingSource;
+        private System.Windows.Forms.BindingSource foodBindingSource1;
+        private System.Windows.Forms.BindingSource foodBindingSource2;
     }
 }
 
