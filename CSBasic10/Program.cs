@@ -25,12 +25,15 @@ namespace CSBasic10
             };
             // 정렬
             /*products.Sort(SortWithPrice);*/
-            products.Sort(delegate(Product x, Product y) {
+            /*products.Sort(delegate(Product x, Product y) {
+                return x.Price.CompareTo(y.Price);
+            });*/
+            products.Sort((x, y) => { 
                 return x.Price.CompareTo(y.Price);
             });
 
             //출력
-            foreach(var item in products)
+            foreach (var item in products)
             {
                 Console.WriteLine(item.Name + " : " + item.Price);
             }
