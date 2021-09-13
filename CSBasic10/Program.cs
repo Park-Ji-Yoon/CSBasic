@@ -2,12 +2,20 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace CSBasic10
 {
     class Program
     {
+        public static void TestMethod()
+        {
+            for(int i=0; i<1000; i++)
+            {
+                Console.Write("A");
+            }
+        }
         public delegate void SendString(string message);
         public static void Hello(string message)
         {
@@ -60,6 +68,26 @@ namespace CSBasic10
             multiDelegate += sayHello;
             Console.WriteLine();
             multiDelegate("박지윤");
+
+            Thread threadA = new Thread(TestMethod);
+            Thread threadB = new Thread(delegate()
+            {
+                for (int i = 0; i < 1000; i++)
+                {
+                    Console.Write("B");
+                }
+            });
+            Thread threadC = new Thread(() =>
+            {
+                for (int i = 0; i < 1000; i++)
+                {
+                    Console.Write("C");
+                }
+            });
+
+            threadA.Start();
+            threadB.Start();
+            threadC.Start();
         }
 
         /*private static int SortWithPrice(Product x, Product y)
