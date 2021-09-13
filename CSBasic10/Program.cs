@@ -8,6 +8,15 @@ namespace CSBasic10
 {
     class Program
     {
+        public delegate void SendString(string message);
+        public static void Hello(string message)
+        {
+            Console.WriteLine("안녕하세요 " + message + "씨..!");
+        }
+        public static void GoodBye(string message)
+        {
+            Console.WriteLine("안녕히 가세요 " + message + "씨~");
+        }
         class Product
         {
             public string Name { get; set; }
@@ -38,6 +47,19 @@ namespace CSBasic10
             {
                 Console.WriteLine(item.Name + " : " + item.Price);
             }
+
+            SendString sayHello, sayGoodbye, multiDelegate;
+            sayHello = Hello;
+            sayGoodbye = GoodBye;
+            multiDelegate = sayHello + sayGoodbye;
+            multiDelegate("박지윤");
+            Console.WriteLine();
+            multiDelegate -= sayGoodbye;
+            // multiDelegate = multiDelegate - sayGoodbye;
+            multiDelegate("박지윤");
+            multiDelegate += sayHello;
+            Console.WriteLine();
+            multiDelegate("박지윤");
         }
 
         /*private static int SortWithPrice(Product x, Product y)
