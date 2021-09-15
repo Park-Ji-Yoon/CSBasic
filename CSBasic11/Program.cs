@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Linq;
 
 namespace CSBasic11
 {
@@ -19,7 +20,29 @@ namespace CSBasic11
         }
         static void Main(string[] args)
         {
-            List<Product> products = new List<Product>()
+            string url = "http://www.kma.go.kr/wid/queryDFSRSS.jsp?zome=1150061500";
+            XElement xElement = XElement.Load(url);
+            var xmlQuery = from item in xElement.Descendants("data")
+                           select new {
+                               no = item.Attribute("seq").Value,
+                                hour = item.Element("hour").Value,
+                                day = item.Element("day").Value,
+                                temp = item.Element("temp").Value,
+                               wdKor = item.Element("wdKor").Value,
+                               wfKor = item.Element("wfKor").Value,
+                               tempMin = item.Element("tmn").Value,
+                                tempMax = item.Element("tmx").Value,
+                            };
+            foreach(var item in xmlQuery)
+            {
+                Console.WriteLine(
+                    item.no + "\t" + item.hour + "\t" + item.day + "\t",
+                    item.temp + "\t" + item.wfKor + "\t" + item.wfKor + "\t",
+                    item.tempMin + "\t" + item.tempMax + "\t"
+                );
+            }
+
+            List < Product > products = new List<Product>()
             {
                 new Product(){Name = "고구마", Price = 1500},
                 new Product(){Name = "감자", Price = 1000},
