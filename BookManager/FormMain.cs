@@ -15,6 +15,7 @@ namespace BookManager
         public Form1()
         {
             InitializeComponent();
+            DataManager d = new DataManager();
         }
     }
 }
