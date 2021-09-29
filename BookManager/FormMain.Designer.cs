@@ -105,12 +105,14 @@ namespace BookManager
             this.도서관리ToolStripMenuItem.Name = "도서관리ToolStripMenuItem";
             this.도서관리ToolStripMenuItem.Size = new System.Drawing.Size(83, 26);
             this.도서관리ToolStripMenuItem.Text = "도서관리";
+            this.도서관리ToolStripMenuItem.Click += new System.EventHandler(this.도서관리ToolStripMenuItem_Click);
             // 
             // 사용자관리ToolStripMenuItem
             // 
             this.사용자관리ToolStripMenuItem.Name = "사용자관리ToolStripMenuItem";
             this.사용자관리ToolStripMenuItem.Size = new System.Drawing.Size(103, 26);
             this.사용자관리ToolStripMenuItem.Text = "사용자 관리";
+            this.사용자관리ToolStripMenuItem.Click += new System.EventHandler(this.사용자관리ToolStripMenuItem_Click);
             // 
             // groupBox1
             // 
@@ -132,7 +134,7 @@ namespace BookManager
             // lblOverdueBooks
             // 
             this.lblOverdueBooks.AutoSize = true;
-            this.lblOverdueBooks.Location = new System.Drawing.Point(164, 93);
+            this.lblOverdueBooks.Location = new System.Drawing.Point(164, 108);
             this.lblOverdueBooks.Name = "lblOverdueBooks";
             this.lblOverdueBooks.Size = new System.Drawing.Size(140, 15);
             this.lblOverdueBooks.TabIndex = 7;
@@ -141,7 +143,7 @@ namespace BookManager
             // lblRentBooks
             // 
             this.lblRentBooks.AutoSize = true;
-            this.lblRentBooks.Location = new System.Drawing.Point(164, 69);
+            this.lblRentBooks.Location = new System.Drawing.Point(164, 84);
             this.lblRentBooks.Name = "lblRentBooks";
             this.lblRentBooks.Size = new System.Drawing.Size(114, 15);
             this.lblRentBooks.TabIndex = 6;
@@ -150,7 +152,7 @@ namespace BookManager
             // lblTotalUsers
             // 
             this.lblTotalUsers.AutoSize = true;
-            this.lblTotalUsers.Location = new System.Drawing.Point(94, 45);
+            this.lblTotalUsers.Location = new System.Drawing.Point(94, 60);
             this.lblTotalUsers.Name = "lblTotalUsers";
             this.lblTotalUsers.Size = new System.Drawing.Size(111, 15);
             this.lblTotalUsers.TabIndex = 5;
@@ -159,7 +161,7 @@ namespace BookManager
             // lblTotalBooks
             // 
             this.lblTotalBooks.AutoSize = true;
-            this.lblTotalBooks.Location = new System.Drawing.Point(114, 21);
+            this.lblTotalBooks.Location = new System.Drawing.Point(114, 36);
             this.lblTotalBooks.Name = "lblTotalBooks";
             this.lblTotalBooks.Size = new System.Drawing.Size(116, 15);
             this.lblTotalBooks.TabIndex = 4;
@@ -168,7 +170,7 @@ namespace BookManager
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(6, 93);
+            this.label4.Location = new System.Drawing.Point(6, 108);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(152, 15);
             this.label4.TabIndex = 3;
@@ -177,7 +179,7 @@ namespace BookManager
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(6, 69);
+            this.label3.Location = new System.Drawing.Point(6, 84);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(152, 15);
             this.label3.TabIndex = 2;
@@ -187,7 +189,7 @@ namespace BookManager
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(6, 45);
+            this.label2.Location = new System.Drawing.Point(6, 60);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(82, 15);
             this.label2.TabIndex = 1;
@@ -196,7 +198,7 @@ namespace BookManager
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(6, 21);
+            this.label1.Location = new System.Drawing.Point(6, 36);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(102, 15);
             this.label1.TabIndex = 0;
@@ -379,7 +381,7 @@ namespace BookManager
             this.nameDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
             this.nameDataGridViewTextBoxColumn.ReadOnly = true;
-            this.nameDataGridViewTextBoxColumn.Width = 75;
+            this.nameDataGridViewTextBoxColumn.Width = 81;
             // 
             // publisherDataGridViewTextBoxColumn
             // 
@@ -389,7 +391,7 @@ namespace BookManager
             this.publisherDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.publisherDataGridViewTextBoxColumn.Name = "publisherDataGridViewTextBoxColumn";
             this.publisherDataGridViewTextBoxColumn.ReadOnly = true;
-            this.publisherDataGridViewTextBoxColumn.Width = 75;
+            this.publisherDataGridViewTextBoxColumn.Width = 81;
             // 
             // pageDataGridViewTextBoxColumn
             // 
@@ -399,7 +401,7 @@ namespace BookManager
             this.pageDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.pageDataGridViewTextBoxColumn.Name = "pageDataGridViewTextBoxColumn";
             this.pageDataGridViewTextBoxColumn.ReadOnly = true;
-            this.pageDataGridViewTextBoxColumn.Width = 62;
+            this.pageDataGridViewTextBoxColumn.Width = 66;
             // 
             // userIdDataGridViewTextBoxColumn
             // 
@@ -456,6 +458,7 @@ namespace BookManager
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
+            this.MaximizeBox = false;
             this.Name = "Form1";
             this.Text = "도서관 관리";
             this.Load += new System.EventHandler(this.Form1_Load);

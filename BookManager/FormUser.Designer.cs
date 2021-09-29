@@ -40,9 +40,9 @@ namespace BookManager
             this.btnAdd = new System.Windows.Forms.Button();
             this.btnModify = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
-            this.userBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.userBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -85,12 +85,12 @@ namespace BookManager
             this.idDataGridViewTextBoxColumn,
             this.nameDataGridViewTextBoxColumn});
             this.dataGridView1.DataSource = this.userBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(7, 25);
+            this.dataGridView1.Location = new System.Drawing.Point(6, 24);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 27;
-            this.dataGridView1.Size = new System.Drawing.Size(406, 395);
+            this.dataGridView1.Size = new System.Drawing.Size(407, 395);
             this.dataGridView1.TabIndex = 0;
             // 
             // label1
@@ -153,10 +153,6 @@ namespace BookManager
             this.btnDelete.Text = "삭제";
             this.btnDelete.UseVisualStyleBackColor = true;
             // 
-            // userBindingSource
-            // 
-            this.userBindingSource.DataSource = typeof(BookManager.User);
-            // 
             // idDataGridViewTextBoxColumn
             // 
             this.idDataGridViewTextBoxColumn.DataPropertyName = "Id";
@@ -175,6 +171,10 @@ namespace BookManager
             this.nameDataGridViewTextBoxColumn.ReadOnly = true;
             this.nameDataGridViewTextBoxColumn.Width = 125;
             // 
+            // userBindingSource
+            // 
+            this.userBindingSource.DataSource = typeof(BookManager.User);
+            // 
             // FormUser
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
@@ -184,6 +184,8 @@ namespace BookManager
             this.Controls.Add(this.groupBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "FormUser";
+            this.ShowIcon = false;
+            this.ShowInTaskbar = false;
             this.Text = "FormUser";
             this.groupBox1.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);

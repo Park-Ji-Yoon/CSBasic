@@ -44,7 +44,6 @@ namespace BookManager
             this.btnDelete = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.bookBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.isbnDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.publisherDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -53,6 +52,7 @@ namespace BookManager
             this.userNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.isBorrowedDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.borrowedAtDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.bookBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -151,6 +151,7 @@ namespace BookManager
             this.btnAdd.TabIndex = 8;
             this.btnAdd.Text = "추가";
             this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // btnModify
             // 
@@ -161,6 +162,7 @@ namespace BookManager
             this.btnModify.TabIndex = 9;
             this.btnModify.Text = "수정";
             this.btnModify.UseVisualStyleBackColor = true;
+            this.btnModify.Click += new System.EventHandler(this.btnModify_Click);
             // 
             // btnDelete
             // 
@@ -170,6 +172,7 @@ namespace BookManager
             this.btnDelete.TabIndex = 10;
             this.btnDelete.Text = "삭제";
             this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // groupBox2
             // 
@@ -204,10 +207,7 @@ namespace BookManager
             this.dataGridView1.RowTemplate.Height = 27;
             this.dataGridView1.Size = new System.Drawing.Size(895, 220);
             this.dataGridView1.TabIndex = 0;
-            // 
-            // bookBindingSource
-            // 
-            this.bookBindingSource.DataSource = typeof(BookManager.Book);
+            this.dataGridView1.CurrentCellChanged += new System.EventHandler(this.dataGridView1_CurrentCellChanged_1);
             // 
             // isbnDataGridViewTextBoxColumn
             // 
@@ -281,6 +281,10 @@ namespace BookManager
             this.borrowedAtDataGridViewTextBoxColumn.ReadOnly = true;
             this.borrowedAtDataGridViewTextBoxColumn.Width = 125;
             // 
+            // bookBindingSource
+            // 
+            this.bookBindingSource.DataSource = typeof(BookManager.Book);
+            // 
             // FormBook
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
@@ -291,6 +295,7 @@ namespace BookManager
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "FormBook";
             this.Text = "FormBook";
+            this.Load += new System.EventHandler(this.FormBook_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
